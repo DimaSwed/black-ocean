@@ -1,27 +1,9 @@
-'use client'
-import React, { FC, useState, useEffect } from 'react'
+import React, { FC } from 'react'
 import { Box, Stack, Typography } from '@mui/material'
 import Header from '../Header/Header'
 import Divider from '@/common/ui-kit/Divider'
 
 const HeroBlock: FC = () => {
-  const [scrollOpacity, setScrollOpacity] = useState(1)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset
-
-      const newOpacity = Math.max(45 - scrollTop / 10, 0)
-      setScrollOpacity(newOpacity)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
-
   return (
     <Box
       sx={{
@@ -181,9 +163,8 @@ const HeroBlock: FC = () => {
               gap: '8px',
               cursor: 'pointer',
               position: 'relative',
-              animation: 'bounce 3s infinite',
-              opacity: scrollOpacity,
-              transition: 'opacity 0.5s ease'
+              animation: 'bounce 3s infinite'
+              // transition: 'opacity 0.5s ease'
             }}
           >
             <Typography variant="body2" sx={{ fontWeight: '600', lineHeight: '120%' }}>
