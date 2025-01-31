@@ -1,12 +1,9 @@
 'use client'
 import React, { FC } from 'react'
-import { Box, Stack, Typography, useMediaQuery } from '@mui/material'
+import { Box, Stack, Typography } from '@mui/material'
 import Link from 'next/link'
 
 const Footer: FC = () => {
-  const isDesktop = useMediaQuery(`(max-width: 992px) and (min-width: 769px)`)
-  const isTablet = useMediaQuery(`(max-width: 768px) and (min-width: 481px)`)
-  const isMobileP = useMediaQuery(`(max-width: 320px)`)
   return (
     <Stack
       id="contacts-section"
