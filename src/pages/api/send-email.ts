@@ -26,7 +26,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       // Отправка электронного письма
       const info = await transporter.sendMail({
         from: `"${name}" <${process.env.MAIL_USER}>`,
-        to: 'vip-performance37@mail.ru',
+        to: 'keenandtightcaretakers@tutamail.com',
         subject: '[BLACK OCEAN] Form',
         text: `A new application has been received:\n
 Name: ${name}\nEmail: ${mail}\nPhone: ${telephone}\nMessage: ${message}`,
