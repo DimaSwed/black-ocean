@@ -1,9 +1,18 @@
-import React, { FC } from 'react'
+'use client'
+import React, { FC, useRef } from 'react'
 import { Box, Stack, Typography } from '@mui/material'
 import Header from '../Header/Header'
 import Divider from '@/common/ui-kit/Divider'
 
 const HeroBlock: FC = () => {
+  const nextSectionRef = useRef<HTMLDivElement | null>(null)
+
+  const handleScrollClick = () => {
+    if (nextSectionRef.current) {
+      nextSectionRef.current.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <Box
       sx={{
@@ -157,6 +166,7 @@ const HeroBlock: FC = () => {
           </Typography>
 
           <Box
+            onClick={handleScrollClick}
             sx={{
               display: 'flex',
               alignItems: 'center',
@@ -164,7 +174,6 @@ const HeroBlock: FC = () => {
               cursor: 'pointer',
               position: 'relative',
               animation: 'bounce 3s infinite'
-              // transition: 'opacity 0.5s ease'
             }}
           >
             <Typography variant="body2" sx={{ fontWeight: '600', lineHeight: '120%' }}>
