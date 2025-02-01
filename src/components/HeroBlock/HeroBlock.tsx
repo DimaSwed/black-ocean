@@ -1,18 +1,16 @@
 'use client'
-import React, { FC, useRef } from 'react'
+import React, { FC } from 'react'
 import { Box, Stack, Typography } from '@mui/material'
 import Header from '../Header/Header'
 import Divider from '@/common/ui-kit/Divider'
 
 const HeroBlock: FC = () => {
-  const nextSectionRef = useRef<HTMLDivElement | null>(null)
-
-  const handleScrollClick = () => {
-    if (nextSectionRef.current) {
-      nextSectionRef.current.scrollIntoView({ behavior: 'smooth' })
+  const handleScroll = () => {
+    const section = document.getElementById('services-section')
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
     }
   }
-
   return (
     <Box
       sx={{
@@ -166,7 +164,7 @@ const HeroBlock: FC = () => {
           </Typography>
 
           <Box
-            onClick={handleScrollClick}
+            onClick={handleScroll}
             sx={{
               display: 'flex',
               alignItems: 'center',
