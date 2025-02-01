@@ -14,10 +14,8 @@ const lightTheme = createTheme({
       fontWeight: 600,
       fontSize: '24px',
       lineHeight: '120%',
-      transition: 'font-size 2s ease'
-      // '@media (max-width:768px)': { fontSize: '22px' }
-      // '@media (max-width:720px)': { fontSize: '18px' },
-      // '@media (max-width:500px)': { fontSize: '16px' }
+      transition: 'font-size 2s ease',
+      '@media (max-width:480px)': { fontSize: '20px' }
     },
     body2: {
       fontFamily: 'Open Sans, sans-serif',
@@ -65,7 +63,7 @@ const lightTheme = createTheme({
       lineHeight: '100%',
       textTransform: 'none',
       transition: 'font-size 2s ease',
-      '@media (max-width:993px)': { fontSize: '54px' },
+      '@media (max-width:992px)': { fontSize: '54px' },
       '@media (max-width:768px)': { fontSize: '44px' },
       '@media (max-width:480px)': { fontSize: '32px' }
     },

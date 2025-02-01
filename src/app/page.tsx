@@ -1,5 +1,6 @@
 import HeroBlock from '@/components/HeroBlock/HeroBlock'
 import ServicesBlock from '@/components/ServicesBlock/ServicesBlock'
+import AboutBlock from '@/components/AboutBlock/AboutBlock'
 import { Stack } from '@mui/material'
 
 export const metadata = {
@@ -23,6 +24,7 @@ export default function Home() {
     >
       <HeroBlock />
       <ServicesBlock />
+      <AboutBlock />
     </Stack>
   )
 }
