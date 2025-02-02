@@ -15,7 +15,7 @@ const HeroBlock: FC = () => {
     <Box
       sx={{
         position: 'relative',
-        backgroundImage: 'url("./hero-section.png")',
+        backgroundImage: 'url("/hero-section.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}

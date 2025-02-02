@@ -1,6 +1,7 @@
 import HeroBlock from '@/components/HeroBlock/HeroBlock'
 import ServicesBlock from '@/components/ServicesBlock/ServicesBlock'
 import AboutBlock from '@/components/AboutBlock/AboutBlock'
+import BrifgifyBlock from '@/components/BridgifyBlock/BrifgifyBlock'
 import { Stack } from '@mui/material'
 
 export const metadata = {
@@ -25,6 +26,7 @@ export default function Home() {
       <HeroBlock />
       <ServicesBlock />
       <AboutBlock />
+      <BrifgifyBlock />
     </Stack>
   )
 }
