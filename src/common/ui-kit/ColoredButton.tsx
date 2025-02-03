@@ -3,16 +3,17 @@ import { Button, ButtonProps } from '@mui/material'
 import { styled } from '@mui/system'
 
 const StyledButton = styled(Button)(({ theme }) => ({
-  maxWidth: '533px',
+  maxWidth: '892px',
   width: '100%',
-  height: '58px',
+  height: '60px',
   borderRadius: '0px',
-  backgroundColor: theme.palette.background.paper,
+  backgroundColor: 'transparent',
   color: theme.palette.primary.light,
+  border: '1px solid rgba(255, 255, 255, 1.0)',
   transition: 'background-color 0.3s, color 0.3s',
   '&:hover': {
     backgroundColor: theme.palette.primary.light,
-    color: theme.palette.background.paper
+    color: theme.palette.text.secondary
   }
 }))
 

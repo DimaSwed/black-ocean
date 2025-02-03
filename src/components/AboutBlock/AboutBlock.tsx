@@ -9,7 +9,7 @@ const AboutBlock: FC = () => {
 
   return (
     <Stack
-      id={'services-section'}
+      id={'about-section'}
       sx={{
         height: 'fit-content',
         position: 'relative',

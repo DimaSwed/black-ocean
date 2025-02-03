@@ -23,7 +23,7 @@ const BulletPoint = () => (
 const ServicesBlock: FC = () => {
   return (
     <Box
-      id={'services-section'}
+      id="services-section"
       sx={{
         height: 'fit-content',
         position: 'relative',

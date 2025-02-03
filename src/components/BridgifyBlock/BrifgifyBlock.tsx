@@ -9,7 +9,6 @@ const ArrowIcon = styled('img')(() => ({
   cursor: 'pointer',
   width: '22px',
   height: '22px',
-  transition: 'transform 0.2s ease-in-out',
   transform: 'rotate(0deg)'
 }))
 
@@ -18,6 +17,7 @@ const BrifgifyBlock: FC = () => {
 
   return (
     <Box
+      id="bridgify-section"
       sx={{
         backgroundImage: 'url("/bridgify-section.png")',
         backgroundSize: 'cover',
@@ -41,7 +41,6 @@ const BrifgifyBlock: FC = () => {
       }}
     >
       <Stack
-        id={'bridgify-section'}
         sx={{
           // height: 'fit-content',
           // height: '808px',
@@ -195,11 +194,10 @@ const BrifgifyBlock: FC = () => {
                 {'Discover bridgify'}
               </Typography>
               <ArrowIcon
-                src={isHover ? '/icons/icon-arrow-right.svg' : '/icons/icon-arrow-down.svg'}
+                src={isHover ? '/icons/icon-arrow-right-white.svg' : '/icons/icon-arrow-down.svg'}
                 alt="Arrow Icon"
                 sx={{
-                  ml: '8px',
-                  filter: isHover ? 'invert(1)' : 'invert(0)'
+                  ml: '8px'
                 }}
               />
             </BlackButton>
