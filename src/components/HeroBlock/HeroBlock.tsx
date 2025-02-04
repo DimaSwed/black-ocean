@@ -102,17 +102,22 @@ const HeroBlock: FC = () => {
             }
           }}
         />
-        <Box sx={{ zIndex: 1 }}>
+        <Box sx={{ zIndex: 1, width: '100%' }}>
           <Typography
             variant="h1"
             sx={{
+              maxWidth: '1368px',
+              width: '100%',
               fontWeight: '400',
               color: 'primary.light',
               letterSpacing: -3,
               textTransform: 'uppercase',
               textIndent: '425px',
-              '@media (max-width:993px)': { textIndent: '283px' },
-              maxWidth: '929px',
+              '@media (max-width:992px) and (min-width: 769px)': {
+                textIndent: '283px',
+                maxWidth: '929px'
+              },
+
               '@media (max-width: 768px) and (min-width: 481px)': {
                 textIndent: '170px',
                 maxWidth: '706px'
