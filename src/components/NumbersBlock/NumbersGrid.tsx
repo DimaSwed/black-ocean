@@ -14,7 +14,7 @@ const NumbersGrid: FC = () => {
         justifyContent: 'space-between',
         pb: '72px',
         '@media (max-width: 480px)': {
-          pb: '54px'
+          pb: '0px'
         },
         '@media (max-width:320px)': {
           gap: '16px',

@@ -98,18 +98,7 @@ const lightTheme = createTheme({
       lineHeight: '120%',
       textTransform: 'none',
       transition: 'font-size 2s ease'
-      // '@media (max-width:1440px)': { fontSize: '24px', lineHeight: '130%' },
-      // '@media (max-width:1230px)': { fontSize: '22px', lineHeight: '130%' },
-      // '@media (max-width:720px)': { fontSize: '20px', lineHeight: '130%' },
-      // '@media (max-width:500px)': { fontSize: '18px', lineHeight: '130%' }
     }
-    // h5: {
-    //   fontFamily: 'Helvetica Neue',
-    //   fontSize: '16px',
-    //   fontWeight: '700',
-    //   fontStyle: 'normal',
-    //   lineHeight: '130%'
-    // }
   },
 
   palette: {

@@ -4,8 +4,10 @@ import AboutBlock from '@/components/AboutBlock/AboutBlock'
 import BrifgifyBlock from '@/components/BridgifyBlock/BrifgifyBlock'
 import WhyBlock from '@/components/WhyBlock/WhyBlock'
 import StepsBlock from '@/components/StepsBlock/StepsBlock'
-import { Stack } from '@mui/material'
+import { Box, Stack } from '@mui/material'
 import NumbersBlock from '@/components/NumbersBlock/NumbersBlock'
+import TestimonialsBlock from '@/components/TestimonialsBlock/TestimonialsBlock'
+import Form from '@/components/FormBlock/FormBlock'
 
 export const metadata = {
   title: 'BLACK OCEAN',
@@ -33,6 +35,15 @@ export default function Home() {
       <WhyBlock />
       <StepsBlock />
       <NumbersBlock />
+      <TestimonialsBlock />
+      <Box
+        sx={{
+          backgroundColor: 'text.primary',
+          position: 'relative'
+        }}
+      >
+        <Form />
+      </Box>
     </Stack>
   )
 }

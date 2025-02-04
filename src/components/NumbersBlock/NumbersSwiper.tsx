@@ -33,7 +33,8 @@ const NumbersSwiper: FC = () => {
           autoplay={{ delay: 1000, disableOnInteraction: false }}
           breakpoints={{
             992: { slidesPerView: 3, spaceBetween: 20 },
-            1280: { slidesPerView: 3, spaceBetween: 20 }
+            1280: { slidesPerView: 3, spaceBetween: 20 },
+            1440: { slidesPerView: 4, spaceBetween: 40 }
           }}
           style={{
             overflow: 'visible'

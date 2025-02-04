@@ -1,26 +1,26 @@
 import { FC } from 'react'
 import { Box } from '@mui/material'
-
 import { styled } from '@mui/system'
 
 export const ShowMoreButton = styled(Box)(({ theme }) => ({
   width: '100%',
-  height: '58px',
+  height: '50px',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  gap: '10px',
+  gap: '6px',
   cursor: 'pointer',
-  backgroundColor: theme.palette.background.paper,
+  backgroundColor: 'transparent',
+  border: '1px solid rgba(255, 255, 255, 1.0)',
   color: theme.palette.primary.light,
-  fontFamily: 'Poppins',
-  fontSize: '26px',
-  fontWeight: '400',
+  fontFamily: 'Open Sans, sans-serif',
+  fontSize: '18px',
+  fontWeight: '700',
   fontStyle: 'normal',
-  lineHeight: '120%',
+  lineHeight: '100%',
+  letterSpacing: -2,
   textTransform: 'uppercase',
   borderRadius: '0px',
-  border: 'transparent',
   outline: 'none',
   '&:hover': {
     backgroundColor: theme.palette.background.paper
@@ -34,10 +34,8 @@ export const ShowMoreButton = styled(Box)(({ theme }) => ({
 }))
 
 const ArrowIcon = styled('img')(() => ({
-  width: '24px',
-  height: '24px',
-  transition: 'transform 0.2s ease-in-out',
-  transform: 'rotate(0deg)'
+  width: '22px',
+  height: '22px'
 }))
 
 interface ShowMoreProps {
@@ -51,11 +49,8 @@ const ShowMore: FC<ShowMoreProps> = ({ isExpanded, onClick, text }) => {
     <ShowMoreButton onClick={onClick}>
       {text}
       <ArrowIcon
-        src="/icons/icon-arrow down-white.svg"
+        src={isExpanded ? '/icons/icon-arrow-up-white.svg' : '/icons/icon-arrow-down-white.svg'}
         alt="Arrow Icon"
-        style={{
-          transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)'
-        }}
       />
     </ShowMoreButton>
   )
