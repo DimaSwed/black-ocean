@@ -1,11 +1,9 @@
 'use client'
 import { FC } from 'react'
-import { Box, Typography, CardMedia, Stack, useMediaQuery } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import ContactForm from '../FormBlock/Form'
 
 const Form: FC = () => {
-  const isMobileL = useMediaQuery(`(max-width: 480px) and (min-width: 321px)`)
-
   return (
     <Box
       sx={{

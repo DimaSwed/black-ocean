@@ -1,6 +1,6 @@
 'use client'
 import { FC, useState } from 'react'
-import { Stack, Box, Typography } from '@mui/material'
+import { Stack, Box, Typography, useMediaQuery } from '@mui/material'
 import { styled } from '@mui/system'
 import Divider from '@/common/ui-kit/Divider'
 import BlackButton from '@/common/ui-kit/ButtonBlack'
@@ -14,12 +14,15 @@ const ArrowIcon = styled('img')(() => ({
 
 const BrifgifyBlock: FC = () => {
   const [isHover, setIsHover] = useState<boolean>(false)
+  const isMobileP = useMediaQuery(`(max-width: 320px)`)
 
   return (
     <Box
       id="bridgify-section"
       sx={{
-        backgroundImage: 'url("/bridgify-section.png")',
+        backgroundImage: isMobileP
+          ? 'url("/bridgify-section-mobile.png")'
+          : 'url("/bridgify-section.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '808px',
@@ -36,7 +39,8 @@ const BrifgifyBlock: FC = () => {
           height: '709px'
         },
         '@media (max-width: 320px)': {
-          height: '916px'
+          height: 'fit-content',
+          backgroundSize: 'contain'
         }
       }}
     >

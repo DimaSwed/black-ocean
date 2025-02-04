@@ -7,6 +7,7 @@ import { whyData } from './WhyBlockData'
 const WhyBlock: FC = () => {
   return (
     <Stack
+      id="why-we-section"
       sx={{
         // height: 'fit-content',
         // height: '808px',
