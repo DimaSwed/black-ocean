@@ -11,7 +11,7 @@ import Divider from '@/common/ui-kit/Divider'
 import { usePathname } from 'next/navigation'
 
 const Header: FC = () => {
-  const [lang, setLang] = useState('eng')
+  const [lang, setLang] = useState(localStorage.getItem('lang') || 'eng')
 
   const pathname = usePathname()
   const isHomePage = pathname === '/'

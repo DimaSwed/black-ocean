@@ -2,8 +2,11 @@
 import { FC } from 'react'
 import { Box, Stack } from '@mui/system'
 import { Typography, useMediaQuery } from '@mui/material'
+import { useTranslation } from 'react-i18next'
 
 const AboutBlock: FC = () => {
+  const { t } = useTranslation()
+
   const isMobileP = useMediaQuery(`(max-width: 320px)`)
   const isMobileL = useMediaQuery(`(max-width: 480px) and (min-width: 321px)`)
 
@@ -49,8 +52,7 @@ const AboutBlock: FC = () => {
           // '@media (max-width:992px)': { maxWidth: '960px', width: '100%', m: '0 auto' }
         }}
       >
-        Our aim - to supply best service in providing web traffic which will grow your sales
-        results.
+        {t('about title')}
       </Typography>
       <Box
         sx={{
@@ -86,7 +88,7 @@ const AboutBlock: FC = () => {
             height: 'auto',
             width: '100%',
             '@media (max-width:1280px)': { maxWidth: '360px', height: '570px' },
-            '@media (max-width:992px)': { maxWidth: '300px', height: '542px' },
+            '@media (max-width:992px)': { maxWidth: '300px', height: '462px' },
             '@media (max-width:768px)': { maxWidth: '354px', height: '417px' },
             '@media (max-width:480px)': { maxWidth: '448px', height: '250px' },
             '@media (max-width:320px)': { maxWidth: '300px', height: '250px' }
@@ -102,10 +104,8 @@ const AboutBlock: FC = () => {
             '@media (max-width:480px)': { maxWidth: '100%', textAlign: 'center' }
           }}
         >
-          Besides that, we supply software for your business which decide your tasks with 100%
-          accuracy. Mission of Black Ocean is to guarantee the highest level of quality on the
-          market. {isMobileL || isMobileP ? '' : <br />} Team of Black Ocean always provide
-          technical support and service for clients.
+          {t('about description part 1')} {isMobileL || isMobileP ? '' : <br />}{' '}
+          {t('about description part 2')}
         </Typography>
       </Box>
     </Stack>

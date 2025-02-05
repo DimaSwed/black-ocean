@@ -4,6 +4,8 @@ import { Stack, Box, Typography, useMediaQuery } from '@mui/material'
 import { styled } from '@mui/system'
 import Divider from '@/common/ui-kit/Divider'
 import BlackButton from '@/common/ui-kit/ButtonBlack'
+import { useTranslation } from 'react-i18next'
+import { Language } from '@/models/language.types'
 
 const ArrowIcon = styled('img')(() => ({
   cursor: 'pointer',
@@ -13,6 +15,9 @@ const ArrowIcon = styled('img')(() => ({
 }))
 
 const BrifgifyBlock: FC = () => {
+  const { t, i18n } = useTranslation()
+  const isEnglish = i18n.language === Language.ENG
+
   const [isHover, setIsHover] = useState<boolean>(false)
   const isMobileP = useMediaQuery(`(max-width: 320px)`)
 
@@ -40,7 +45,7 @@ const BrifgifyBlock: FC = () => {
         },
         '@media (max-width: 320px)': {
           height: 'fit-content',
-          backgroundSize: 'contain'
+          backgroundSize: isEnglish ? 'contain' : 'cover'
         }
       }}
     >
@@ -85,7 +90,7 @@ const BrifgifyBlock: FC = () => {
             mb: '20px'
           }}
         >
-          Bridgify: Simplify Your Online Business
+          {t('bridgify title')}
         </Typography>
 
         <Typography
@@ -111,9 +116,7 @@ const BrifgifyBlock: FC = () => {
             }
           }}
         >
-          At Black Ocean, we not only deliver tailored web traffic and software solutions but also
-          innovate with our proprietary tools. One such product is Bridgify – an advanced eCommerce
-          solution designed to streamline online store management and boost business efficiency.
+          {t('bridgify description')}
         </Typography>
 
         <Stack
@@ -149,14 +152,10 @@ const BrifgifyBlock: FC = () => {
               }}
             >
               <Typography variant="subtitle1" color="primary.main">
-                Bridgify specializes in building and optimizing online stores on the Odoo platform.
-                It offers automation for up to 10 business tasks and modular functionality to adapt
-                to your specific needs.
+                {t('bridgify subtitle 1')}
               </Typography>
               <Typography variant="subtitle1" color="primary.main">
-                With tools like SEO, Google Analytics integration, and promo creation, Bridgify
-                helps businesses scale efficiently. Ongoing support and training make it your
-                trusted partner for seamless eCommerce success.
+                {t('bridgify subtitle 2')}
               </Typography>
             </Stack>
           </Box>
@@ -195,7 +194,7 @@ const BrifgifyBlock: FC = () => {
                   textTransform: 'uppercase'
                 }}
               >
-                {'Discover bridgify'}
+                {t('bridgify button')}
               </Typography>
               <ArrowIcon
                 src={isHover ? '/icons/icon-arrow-right-white.svg' : '/icons/icon-arrow-down.svg'}

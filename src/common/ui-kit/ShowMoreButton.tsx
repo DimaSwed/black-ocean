@@ -21,16 +21,16 @@ export const ShowMoreButton = styled(Box)(({ theme }) => ({
   letterSpacing: -2,
   textTransform: 'uppercase',
   borderRadius: '0px',
-  outline: 'none',
-  '&:hover': {
-    backgroundColor: theme.palette.background.paper
-  },
-  '&:focus': {
-    backgroundColor: theme.palette.background.paper
-  },
-  '&:active': {
-    backgroundColor: theme.palette.background.paper
-  }
+  outline: 'none'
+  // '&:hover': {
+  //   backgroundColor: theme.palette.primary.light
+  // }
+  // '&:focus': {
+  //   backgroundColor: theme.palette.background.paper
+  // },
+  // '&:active': {
+  //   backgroundColor: theme.palette.background.paper
+  // }
 }))
 
 const ArrowIcon = styled('img')(() => ({

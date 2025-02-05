@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter'
 import { ThemeWrapper } from '@/providers/provider-theme'
 import StoreProvider from '@/providers/provider-store'
+import I18nProvider from '@/providers/provider-i18n'
 import '@/styles/globals.sass'
 import Footer from '@/components/Footer/Footer'
 import { Box } from '@mui/material'
@@ -23,10 +24,12 @@ export default function RootLayout({
         <StoreProvider>
           <AppRouterCacheProvider>
             <ThemeWrapper>
-              {children}
-              <Box sx={{ backgroundColor: 'text.primary' }}>
-                <Footer />
-              </Box>
+              <I18nProvider>
+                {children}
+                <Box sx={{ backgroundColor: 'text.primary' }}>
+                  <Footer />
+                </Box>
+              </I18nProvider>
             </ThemeWrapper>
           </AppRouterCacheProvider>
         </StoreProvider>

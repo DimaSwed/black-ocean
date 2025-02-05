@@ -1,0 +1,273 @@
+{
+  "about": "About",
+  "services": "Services",
+  "whyWe": "Why We",
+  "bridgify": "Bridgify",
+  "contacts": "Contacts",
+  "products": "Products",
+  "hero title": "Simplify your digital journey with tailored web traffic strategies and cutting-edge software designed to elevate your business performance.",
+  "hero subtitle": "Optimize your online presence with precision, unlock exclusive tools to tackle business challenges, and drive growth with scalable, reliable solutions from Black Ocean.",
+  "hero scroll": "Scroll to explore",
+  "services title": "Our Services",
+  "serices button": "Become a client",
+  "services description": {
+    "iosApps": {
+      "title": "iOS Apps",
+      "description": "Black Ocean develops applications for macOS for any business need. Our experts can fulfill any of your whims.",
+      "bulletPoints": [
+        "Custom iOS applications tailored to your business needs.",
+        "Tailored traffic solutions for your goals.",
+        "Scalable solutions designed to adapt to market growth."
+      ]
+    },
+    "androidApps": {
+      "title": "Android Apps",
+      "description": "Our company creates Android apps for any business need. You will be satisfied with the result.",
+      "bulletPoints": [
+        "Android apps crafted for diverse business requirements.",
+        "Intuitive interfaces optimized for user engagement.",
+        "Seamless compatibility across Android devices.",
+        "Regular updates and technical support to maintain app quality."
+      ]
+    },
+    "macOS": {
+      "title": "macOS",
+      "description": "We provide service creating macOS apps and technical support for macOS.",
+      "bulletPoints": [
+        "High-performance macOS app development.",
+        "Native macOS feature integration.",
+        "Comprehensive technical support tailored to your needs.",
+        "Apps designed for scalability and future expansion.",
+        "Fully customized solutions for your industry."
+      ]
+    },
+    "crm": {
+      "title": "CRM",
+      "description": "Our specialists will build up the most effective CRM system for your business.",
+      "bulletPoints": [
+        "Customized CRM systems to optimize business processes.",
+        "Automation tools to enhance customer engagement.",
+        "Real-time reporting and analytics for data-driven decisions.",
+        "Scalable and flexible solutions to grow with your business."
+      ]
+    },
+    "analysis": {
+      "title": "Analysis",
+      "description": "Analyzing the digital business structure our team will find mistakes and opportunities which will bring a profit.",
+      "bulletPoints": [
+        "Digital analysis to find growth areas.",
+        "Insights to fix inefficiencies.",
+        "Strategic recommendations backed by data."
+      ]
+    },
+    "webTraffic": {
+      "title": "Web-Traffic",
+      "description": "Black Ocean delivers effective web traffic using CPA, CPC, and CPL models.",
+      "bulletPoints": [
+        "Efficient web traffic via CPA, CPC, CPL.",
+        "Targeted strategies to attract a solvent audience.",
+        "Ongoing optimization to maximize conversions.",
+        "Transparent reporting and analytics for campaign performance.",
+        "Personalized traffic solutions to meet your business goals."
+      ]
+    }
+  },
+  "about title": "Our aim - to supply best service in providing web traffic which will grow your sales results.",
+  "about description part 1": "Besides that, we supply software for your business which decide your tasks with 100% accuracy. Mission of Black Ocean is to guarantee the highest level of quality on the market.",
+  "about description part 2": "Team of Black Ocean always provide technical support and service for clients.",
+  "bridgify title": "Bridgify: Simplify Your Online Business",
+  "bridgify description": "At Black Ocean, we not only deliver tailored web traffic and software solutions but also innovate with our proprietary tools. One such product is Bridgify – an advanced eCommerce solution designed to streamline online store management and boost business efficiency.",
+  "bridgify subtitle 1": "Bridgify specializes in building and optimizing online stores on the Odoo platform. It offers automation for up to 10 business tasks and modular functionality to adapt to your specific needs.",
+  "bridgify subtitle 2": "With tools like SEO, Google Analytics integration, and promo creation, Bridgify helps businesses scale efficiently. Ongoing support and training make it your trusted partner for seamless eCommerce success.",
+  "bridgify button": "Discover bridgify",
+  "why title": "Why choose Black Ocean?",
+  "why subtitle": "Expert-driven solutions, proven industry leadership, and dedicated support empower your business to achieve lasting success and measurable results.",
+  "why button": "Become a Client",
+  "why description": {
+    "first": {
+      "title": "Technical Divercity",
+      "description": "We understand all areas of software development at a high level. Understanding the structure of the sphere enables us to offer the most effective solutions for our clients.",
+      "imgSrc": "/icons/advantage-rec-block1.png"
+    },
+    "second": {
+      "title": "Professional Team",
+      "description": "Our team comprises highly skilled professionals who work seamlessly together, combining expertise and dedication to deliver exceptional results, ensuring every project meets the highest standards.",
+      "imgSrc": "/icons/advantage-rec-block2.png"
+    },
+    "third": {
+      "title": "Sphere Leader",
+      "description": "We confidently declare that our company is a leader among others. We provide the best quality for certain price level.",
+      "imgSrc": "/icons/advantage-rec-block3.png"
+    },
+    "fourth": {
+      "title": "Full Project Support",
+      "description": "We are responsible for the work done with a guarantee for our services. On request, we provide technical support for software or web traffic.",
+      "imgSrc": "/icons/advantage-rec-block4.png"
+    }
+  },
+  "steps title": "This is exactly how it works",
+  "steps subtitle": "Over the long experience of working with clients, we have built our own scheme of work. Our cooperation scheme is extremely effective. We are able to provide you with the highest quality service and products.",
+  "steps description": {
+    "first": {
+      "id": "//01",
+      "title": "Your Request",
+      "description": "If you are interested, you can contact us to discuss the tasks of your business. Before applying, you need to draw up a clear request."
+    },
+    "second": {
+      "id": "//02",
+      "title": "Custom Solution",
+      "description": "At the second stage, our team processes your request and selects the best solutions for you. With future results guaranteed."
+    },
+    "third": {
+      "id": "//03",
+      "title": "Launch Agreement",
+      "description": "Client and Black Ocean agree the date and time of start usage of traffic and software for business."
+    }
+  },
+  "numbers title 1": "Trust the numbers",
+  "numbers title 2": "Trust Black Ocean",
+  "numbers title 3": "Trust the numbers / Trust Black Ocean",
+  "numbers subtitle": "When you work with us, you’re choosing a team that values excellence in every detail, from project completion to ongoing support.",
+  "numbers description": {
+    "first": {
+      "numbers": "50+",
+      "title": "Projects Delivered",
+      "description": "Proven expertise across diverse industries, ensuring exceptional outcomes."
+    },
+    "second": {
+      "numbers": "99%",
+      "title": "Success Rate",
+      "description": "Trusted by clients worldwide for reliable and effective solution"
+    },
+    "third": {
+      "numbers": "30+",
+      "title": "Traffic & Software Projects",
+      "description": "Fueling creativity and dedication behind every successful project."
+    },
+    "fourth": {
+      "numbers": "20+",
+      "title": "Specialists",
+      "description": "A highly skilled team dedicated to solving complex challenges."
+    },
+    "fifth": {
+      "numbers": "5",
+      "title": "Ongoing Projects",
+      "description": "Continuously driving innovation and delivering value to our clients."
+    },
+    "sixth": {
+      "numbers": "1000+",
+      "title": "Cups of Coffe",
+      "description": "Fueling creativity and dedication behind every successful project."
+    }
+  },
+  "testimonials title": " Testimonials",
+  "testimonials show button": "Show more",
+  "testimonials less button": "Show less",
+  "testimonials description": {
+    "first": {
+      "id": "1",
+      "name": "Jan Novák",
+      "position": "CEO",
+      "image": "/team/Jan Novák-avatar.png",
+      "tasks": [
+        "Developed a custom CRM system",
+        "Boosted web traffic and visibility",
+        "Provided technical support"
+      ],
+      "feedback": "Working with Black Ocean has been transformative for our business. Their tailored software solutions and expert traffic management have significantly increased our online visibility and revenue."
+    },
+    "second": {
+      "id": "2",
+      "name": "Michael Johnson",
+      "position": "Founder",
+      "image": "/team/Michael Johnson-avatar.png",
+      "tasks": [
+        "Created business automation software",
+        "Ran CPA and CPC campaigns",
+        "Scaled digital operations"
+      ],
+      "feedback": "Their innovative approach to software development and web traffic optimization has made a noticeable difference in our operations. Black Ocean is truly a reliable partner for growth."
+    },
+    "third": {
+      "id": "3",
+      "name": "Eva Kovářová",
+      "position": "Marketing Director",
+      "image": "/team/Eva Kovářová-avatar.png",
+      "tasks": [
+        "Analyzed the digital structure",
+        "Enhanced SEO performance",
+        "Delivered optimized workflows"
+      ],
+      "feedback": "Black Ocean impressed us with their professionalism and attention to detail. They quickly understood our needs and delivered solutions that exceeded all our expectations."
+    },
+    "fourth": {
+      "id": "4",
+      "name": "Daniel White-avatar",
+      "position": "COO",
+      "image": "/team/Daniel White-avatar.png",
+      "tasks": [
+        "Designed scalable software.",
+        "Optimized digital campaigns.",
+        "Provided ongoing support."
+      ],
+      "feedback": "I was amazed by Black Ocean’s ability to handle complex challenges with ease. Their expertise and dedication helped us achieve our goals faster than anticipated."
+    },
+    "fifth": {
+      "id": "5",
+      "name": "Sophia Brown",
+      "position": "Ecommerce Manager",
+      "image": "/team/Sophia Brown-avatar.png",
+      "tasks": [
+        "Improved web traffic strategies.",
+        "Boosted conversions by 40%.",
+        "Enhanced website performance."
+      ],
+      "feedback": "Black Ocean’s team delivered exceptional results for our online store. Their strategies for web traffic optimization increased our conversions by 40% in just three months."
+    },
+    "sixth": {
+      "id": "6",
+      "name": "Emma Wilson",
+      "position": "Project Manager",
+      "image": "/team/Emma Wilson-avatar.png",
+      "tasks": [
+        "Designed scalable software.",
+        "Optimized digital campaigns.",
+        "Provided ongoing support."
+      ],
+      "feedback": "From consultation to execution, Black Ocean delivered with precision and creativity. Their traffic solutions brought us measurable results, and their team was a pleasure to work with."
+    }
+  },
+  "form title": "Drop us a line",
+  "form input name": "Name",
+  "form input email": "Email",
+  "form input telephone": "Phone number",
+  "form input message": "Message",
+  "form send button": "Submit",
+  "form submitted text 1": "Thank you!",
+  "form submitted text 2": "Your submission has been received!",
+  "form error text": "Oops! Something went wrong while submitting the form.",
+  "form submitting text": "Submiting...",
+  "form submit text": "Submit",
+  "validation": {
+    "name": {
+      "required": "Please provide your name!",
+      "min": "Name must be at least 2 characters long",
+      "matches": "Name must contain only letters"
+    },
+    "telephone": {
+      "required": "Please provide a contact phone number!",
+      "matches": "Please enter a valid phone number in the format +7 (___) ___-__-__"
+    },
+    "mail": {
+      "email": "Invalid email address",
+      "matches": "Invalid email address",
+      "required": "Required field",
+      "min": "Email must be at least 8 characters long",
+      "max": "Email must be no more than 64 characters long"
+    },
+    "message": {
+      "required": "Required field",
+      "min": "Message must be at least 10 characters long"
+    }
+  }
+}

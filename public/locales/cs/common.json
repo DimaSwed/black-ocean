@@ -1,0 +1,273 @@
+{
+  "about": "O nás",
+  "services": "Služby",
+  "whyWe": "Proč my",
+  "bridgify": "Bridgify",
+  "contacts": "Kontakty",
+  "products": "Produkty",
+  "hero title": "Zjednodušte svou digitální cestu díky personalizovaným strategiím webového provozu a špičkovému softwaru navrženému pro zlepšení výkonu vašeho podnikání.",
+  "hero subtitle": "Optimalizujte svou online přítomnost s přesností, využijte exkluzivní nástroje k řešení obchodních výzev a zvyšte růst díky spolehlivým, škálovatelným řešením od Black Ocean.",
+  "hero scroll": "Prozkoumat více",
+  "services title": "NAŠE SLUŽBY",
+  "serices button": "Staňte se klientem",
+  "services description": {
+    "iosApps": {
+      "title": "iOS aplikace",
+      "description": "Black Ocean vyvíjí aplikace pro macOS na míru vašim potřebám. Naši odborníci splní jakýkoli váš požadavek.",
+      "bulletPoints": [
+        "Vlastní iOS aplikace přizpůsobené vašim obchodním potřebám.",
+        "Přizpůsobená řešení webového provozu vašim cílům.",
+        "Škálovatelná řešení navržená pro růst na trhu."
+      ]
+    },
+    "androidApps": {
+      "title": "Android aplikace",
+      "description": "Naše společnost vytváří Android aplikace pro jakékoli potřeby vašeho podnikání. Budete spokojeni s výsledkem.",
+      "bulletPoints": [
+        "Android aplikace vytvořené pro různorodé obchodní požadavky.",
+        "Intuitivní rozhraní optimalizovaná pro zapojení uživatelů.",
+        "Bezproblémová kompatibilita napříč zařízeními Android.",
+        "Pravidelné aktualizace a technická podpora pro zajištění kvality aplikací."
+      ]
+    },
+    "macOS": {
+      "title": "macOS",
+      "description": "Poskytujeme služby vývoje aplikací pro macOS a technickou podporu.",
+      "bulletPoints": [
+        "Vývoj aplikací s vysokým výkonem pro macOS.",
+        "Integrace nativních funkcí macOS.",
+        "Komplexní technická podpora přizpůsobená vašim potřebám.",
+        "Aplikace navržené pro škálovatelnost a budoucí rozšíření.",
+        "Plně přizpůsobená řešení pro vaše odvětví."
+      ]
+    },
+    "crm": {
+      "title": "CRM",
+      "description": "Naši specialisté vytvoří nejefektivnější CRM systém pro vaše podnikání.",
+      "bulletPoints": [
+        "Přizpůsobené CRM systémy pro optimalizaci obchodních procesů.",
+        "Automatizační nástroje pro zlepšení zapojení zákazníků.",
+        "Analýzy a reporty v reálném čase pro rozhodování na základě dat.",
+        "Škálovatelná a flexibilní řešení, která rostou s vaším podnikáním."
+      ]
+    },
+    "analysis": {
+      "title": "Analýza",
+      "description": "Analyzujeme digitální strukturu vašeho podnikání a najdeme chyby i příležitosti, které zvýší váš zisk.",
+      "bulletPoints": [
+        "Digitální analýza pro identifikaci růstových oblastí.",
+        "Postřehy pro nápravu neefektivit.",
+        "Strategická doporučení podložená daty."
+      ]
+    },
+    "webTraffic": {
+      "title": "Webový provoz",
+      "description": "Black Ocean nastaví efektivní webový provoz s cíleným publikem. Používáme modely Cost Per Acquisition (CPA), Cost Per Click (CPC) a Cost Per Lead (CPL).",
+      "bulletPoints": [
+        "Efektivní webový provoz přes modely CPA, CPC, CPL.",
+        "Cílené strategie pro přilákání solventního publika.",
+        "Neustálá optimalizace pro maximalizaci konverzí.",
+        "Transparentní reporty a analýzy výkonnosti kampaní.",
+        "Personalizovaná řešení webového provozu přizpůsobená vašim obchodním cílům."
+      ]
+    }
+  },
+  "about title": "Velký odstavec: Naším cílem je poskytovat nejlepší služby v oblasti webového provozu, které zvýší vaše obchodní výsledky.",
+  "about description part 1": "Kromě toho poskytujeme software pro vaše podnikání, který řeší vaše úkoly s 100% přesností. Naším posláním je zajistit nejvyšší kvalitu na trhu. Tým Black Ocean vždy zajišťuje technickou podporu a servis pro naše klienty.",
+  "about description part 2": "",
+  "bridgify title": "Bridgify: Zjednodušte své online podnikání",
+  "bridgify description": "V Black Ocean nejen poskytujeme řešení na míru pro webový provoz a software, ale také inovujeme s vlastními nástroji. Jedním z nich je Bridgify – pokročilé eCommerce řešení navržené pro zjednodušení správy online obchodů a zvýšení efektivity podnikání.",
+  "bridgify subtitle 1": "Bridgify se specializuje na vytváření a optimalizaci online obchodů na platformě Odoo. Nabízí automatizaci až pro 10 obchodních úkolů a modulární funkčnost, která se přizpůsobí vašim konkrétním potřebám.",
+  "bridgify subtitle 2": "Díky nástrojům jako SEO, integrace Google Analytics a tvorba promoakcí pomáhá Bridgify firmám efektivně růst. Neustálá podpora a školení z něj činí vašeho důvěryhodného partnera pro bezproblémový eCommerce úspěch.",
+  "bridgify button": "Objevte Bridgify",
+  "why title": "Proč si vybrat Black Ocean?",
+  "why button": "Staňte se klientem",
+  "why subtitle": "Řešení vedená odborníky, osvědčené lídrovství v oboru a vyhrazená podpora posilují vaše podnikání k dosažení trvalého úspěchu a měřitelných výsledků.",
+  "why description": {
+    "first": {
+      "title": "Technická diverzita",
+      "description": "Rozumíme všem oblastem vývoje softwaru na vysoké úrovni. Díky pochopení struktury oboru můžeme našim klientům nabídnout ta nejefektivnější řešení.",
+      "imgSrc": "/icons/advantage-rec-block1.png"
+    },
+    "second": {
+      "title": "Profesionální tým",
+      "description": "Náš tým tvoří vysoce specializovaní odborníci, kteří dokáží efektivně spolupracovat jako jeden celek. Vždy usilujeme o dosažení nejlepších výsledků.",
+      "imgSrc": "/icons/advantage-rec-block2.png"
+    },
+    "third": {
+      "title": "Lídři v oboru",
+      "description": "Jsme si jisti, že naše společnost je mezi ostatními lídrem. Poskytujeme nejlepší kvalitu za odpovídající cenu.",
+      "imgSrc": "/icons/advantage-rec-block3.png"
+    },
+    "fourth": {
+      "title": "Plná podpora projektů",
+      "description": "Za naši práci ručíme a poskytujeme záruku na naše služby. Na požádání nabízíme technickou podporu pro software nebo webový provoz.",
+      "imgSrc": "/icons/advantage-rec-block4.png"
+    }
+  },
+  "steps title": "Přesně tak to funguje",
+  "steps subtitle": "Díky dlouholetým zkušenostem s prací s klienty jsme vytvořili vlastní schéma spolupráce. Naše schéma je velmi efektivní a umožňuje nám poskytovat ty nejkvalitnější služby a produkty.",
+  "steps description": {
+    "first": {
+      "id": "//01",
+      "title": "Vaše poptávka",
+      "description": "Pokud máte zájem, kontaktujte nás a probereme úkoly vašeho podnikání. Před odesláním žádosti je nutné připravit jasnou poptávku."
+    },
+    "second": {
+      "id": "//02",
+      "title": "Individuální řešení",
+      "description": "Ve druhé fázi náš tým zpracuje vaši poptávku a vybere pro vás ta nejlepší řešení. Garantujeme budoucí výsledky."
+    },
+    "third": {
+      "id": "//03",
+      "title": "Dohoda o zahájení",
+      "description": "Klient a Black Ocean se dohodnou na datu a čase zahájení využívání webového provozu a softwarových řešení pro vaše podnikání."
+    }
+  },
+  "numbers title 1": "Důvěřujte číslům",
+  "numbers title 2": "Důvěřujte Black Ocean",
+  "numbers title 3": "Důvěřujte číslům / Důvěřujte Black Ocean",
+  "numbers subtitle": "Když s námi spolupracujete, vybíráte si tým, který si cení dokonalosti v každém detailu, od dokončení projektu až po následnou podporu.",
+  "numbers description": {
+    "first": {
+      "numbers": "50+",
+      "title": "Dokončených projektů",
+      "description": "Osvědčená odbornost napříč různými odvětvími, zajišťující výjimečné výsledky."
+    },
+    "second": {
+      "numbers": "99%",
+      "title": "Úspěšnost",
+      "description": "Důvěra klientů po celém světě díky spolehlivým a efektivním řešením."
+    },
+    "third": {
+      "numbers": "30+",
+      "title": "Webových projektů",
+      "description": "Komplexní služby přizpůsobené potřebám vašeho podnikání."
+    },
+    "fourth": {
+      "numbers": "20+",
+      "title": "Specialistů",
+      "description": "Vysoce kvalifikovaný tým zaměřený na řešení složitých výzev."
+    },
+    "fifth": {
+      "numbers": "5",
+      "title": "Probíhajících projektů",
+      "description": "Neustálé inovace a přínos hodnoty našim klientům."
+    },
+    "sixth": {
+      "numbers": "1000+",
+      "title": "Šálků Kávy",
+      "description": "Inspirace a odhodlání za každým úspěšným projektem."
+    }
+  },
+  "testimonials title": "Recenze",
+  "testimonials show button": "Zobrazit více",
+  "testimonials less button": "Zobrazit méně",
+  "testimonials description": {
+    "first": {
+      "id": "1",
+      "name": "Jan Novák",
+      "position": "CEO",
+      "image": "/team/Jan Novák-avatar.png",
+      "tasks": [
+        "Vyvinuli jsme vlastní CRM systém",
+        "Zvýšili jsme webový provoz a viditelnost",
+        "PPoskytli jsme technickou podporu"
+      ],
+      "feedback": "Spolupráce s Black Ocean byla pro naše podnikání transformativní. Jejich softwarová řešení na míru a odborné řízení webového provozu výrazně zvýšily naši online viditelnost a příjmy."
+    },
+    "second": {
+      "id": "2",
+      "name": "Michael Johnson",
+      "position": "Zakladatel",
+      "image": "/team/Michael Johnson-avatar.png",
+      "tasks": [
+        "Vytvořili software pro automatizaci podnikání",
+        "Řídili kampaně CPA a CPC",
+        "Zlepšili digitální operace"
+      ],
+      "feedback": "Jejich inovativní přístup k vývoji softwaru a optimalizaci webového provozu měl znatelný dopad na naše operace. Black Ocean je skutečně spolehlivým partnerem pro růst."
+    },
+    "third": {
+      "id": "3",
+      "name": "Eva Kovářová",
+      "position": "Marketingová ředitelka",
+      "image": "/team/Eva Kovářová-avatar.png",
+      "tasks": [
+        "Analyzovali digitální strukturu",
+        "Zlepšili SEO výkonnost",
+        "Optimalizovali pracovní postupy"
+      ],
+      "feedback": "Black Ocean nás ohromil svou profesionalitou a smyslem pro detail. Rychle pochopili naše potřeby a poskytli řešení, která překonala všechna naše očekávání."
+    },
+    "fourth": {
+      "id": "4",
+      "name": "Daniel White-avatar",
+      "position": "COO",
+      "image": "/team/Daniel White-avatar.png",
+      "tasks": [
+        "Navrhli škálovatelný software",
+        "Optimalizovali digitální kampaně",
+        "Poskytli průběžnou podporu"
+      ],
+      "feedback": "Byl jsem ohromen schopností Black Ocean řešit složité výzvy s lehkostí. Jejich odborné znalosti a oddanost nám pomohly dosáhnout našich cílů rychleji, než jsme očekávali."
+    },
+    "fifth": {
+      "id": "5",
+      "name": "Sophia Brown",
+      "position": "Manažerka eCommerce",
+      "image": "/team/Sophia Brown-avatar.png",
+      "tasks": [
+        "Zlepšili strategie webového provozu",
+        "Zvýšili konverze o 40 %",
+        "Vylepšili výkon webových stránek"
+      ],
+      "feedback": "Tým Black Ocean přinesl vynikající výsledky pro náš online obchod. Jejich strategie pro optimalizaci webového provozu zvýšily naše konverze o 40 % během pouhých tří měsíců."
+    },
+    "sixth": {
+      "id": "6",
+      "name": "Emma Wilson",
+      "position": "Projektová manažerka",
+      "image": "/team/Emma Wilson-avatar.png",
+      "tasks": [
+        "Provedli digitální audit",
+        "Realizovali CPL strategie webového provozu",
+        "Sledovali metriky úspěšnosti."
+      ],
+      "feedback": "Od konzultací až po realizaci Black Ocean doručil s přesností a kreativitou. Jejich řešení webového provozu nám přinesla měřitelné výsledky a spolupráce s jejich týmem byla radostí."
+    }
+  },
+  "form title": "NAPIŠTE NÁM",
+  "form input name": "JMÉNO",
+  "form input email": "EMAIL",
+  "form input telephone": "TELEFON",
+  "form input message": "ZPRÁVA",
+  "form send button": "Odeslat",
+  "form submitted text 1": "Děkujeme!",
+  "form submitted text 2": "Vaše odeslání bylo přijato!",
+  "form error text": "Jejda! Při odesílání formuláře došlo k chybě.",
+  "form submitting text": "Odesílání...",
+  "form submit text": "Odeslat",
+  "validation": {
+    "name": {
+      "required": "Uveďte prosím své jméno!",
+      "min": "Název musí mít alespoň 2 znaky",
+      "matches": "Jméno musí obsahovat pouze písmena"
+    },
+    "telephone": {
+      "required": "Uveďte prosím kontaktní telefonní číslo!",
+      "matches": "Zadejte prosím platné telefonní číslo ve formátu +7 (___) ___-__-__"
+    },
+    "mail": {
+      "email": "Neplatná e-mailová adresa",
+      "matches": "Neplatná e-mailová adresa",
+      "required": "Povinné pole",
+      "min": "E-mail musí mít alespoň 8 znaků",
+      "max": "E-mail nesmí být delší než 64 znaků"
+    },
+    "message": {
+      "required": "Povinné pole",
+      "min": "Zpráva musí mít alespoň 10 znaků"
+    }
+  }
+}

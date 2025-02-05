@@ -27,7 +27,12 @@ export const TestimonialCard: React.FC<TestimonialProps> = ({
     >
       {/* Блок задач */}
       <Stack
-        sx={{ flex: 1, gap: '10px', '@media (max-width:992px)': { flex: '1 1 50%', order: '2' } }}
+        sx={{
+          flex: 1,
+          gap: '10px',
+          '@media (max-width:992px)': { flex: '1 1 50%' },
+          '@media (max-width:768px)': { order: '1' }
+        }}
       >
         {tasks.map((task, index) => (
           <Typography variant="subtitle1" key={index} sx={{ color: 'success.main' }}>

@@ -190,8 +190,8 @@ const Footer: FC = () => {
                 >
                   {path === '/cookie-policy' && 'Cookie Policy'}
                   {path === '/privacy-policy' && 'Privacy Policy'}
-                  {path === '/risk-management' && 'Risk Management'}
-                  {path === '/terms-and-conditions' && 'Policy Terms and Conditions'}
+                  {path === '/risk-management' && 'Risk Management Policy'}
+                  {path === '/terms-and-conditions' && 'Terms and Conditions'}
                 </Typography>
               </Link>
             )

@@ -8,6 +8,7 @@ import { lightTheme } from '@/styles/theme'
 import { IEmailRequestBody } from '@/models/form.types'
 import BlackButton from '@/common/ui-kit/ButtonBlack'
 import SubmittedText from './SubmittedText'
+import { useTranslation } from 'react-i18next'
 
 const inputStyles = (hasError: boolean) => ({
   width: '100%',
@@ -62,6 +63,8 @@ const inputStyles = (hasError: boolean) => ({
 })
 
 const Form: FC = () => {
+  const { t } = useTranslation()
+
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [submissionError, setSubmissionError] = useState<string | null>(null)
@@ -73,7 +76,8 @@ const Form: FC = () => {
       mail: '',
       message: ''
     },
-    validationSchema: formValidationSchema,
+    // validationSchema: formValidationSchema,
+    validationSchema: formValidationSchema(t),
     onSubmit: async (
       values: IEmailRequestBody,
       { setSubmitting, resetForm }: FormikHelpers<IEmailRequestBody>
@@ -98,12 +102,10 @@ const Form: FC = () => {
         } else {
           // Если сервер вернул ошибку, считываем текст ошибки и устанавливаем его в состояние
           const errorData = await response.json() // Предполагаем, что сервер возвращает JSON с ошибкой
-          setSubmissionError(
-            errorData.message || 'Oops! Something went wrong while submitting the form.'
-          ) // Устанавливаем сообщение об ошибке
+          setSubmissionError(errorData.message || t('form error text'))
         }
       } catch (error) {
-        setSubmissionError('Oops! Something went wrong while submitting the form.')
+        setSubmissionError(t('form error text'))
         console.error('Error submitting form:', error)
       } finally {
         setIsSubmitting(false)
@@ -150,7 +152,7 @@ const Form: FC = () => {
                 id="name"
                 name="name"
                 type="text"
-                placeholder={'NAME'}
+                placeholder={t('form input name')}
                 variant="outlined"
                 sx={inputStyles(!!(formik.touched.name && formik.errors.name))}
               />
@@ -172,7 +174,7 @@ const Form: FC = () => {
                 id="mail"
                 name="mail"
                 type="email"
-                placeholder={'EMAIL'}
+                placeholder={t('form input email')}
                 variant="outlined"
                 sx={inputStyles(!!(formik.touched.mail && formik.errors.mail))}
               />
@@ -198,7 +200,7 @@ const Form: FC = () => {
                 {(inputProps) => (
                   <TextField
                     {...inputProps}
-                    placeholder="PHONE NUMBER"
+                    placeholder={t('form input telephone')}
                     variant="outlined"
                     sx={inputStyles(!!(formik.touched.telephone && formik.errors.telephone))}
                   />
@@ -223,7 +225,7 @@ const Form: FC = () => {
                 id="message"
                 name="message"
                 type="text"
-                placeholder="MESSAGE"
+                placeholder={t('form input message')}
                 variant="outlined"
                 multiline
                 rows={4}
@@ -284,7 +286,7 @@ const Form: FC = () => {
                   letterSpacing: -2,
                   textTransform: 'uppercase',
                   '&:hover': {
-                    color: '#fff'
+                    color: '#fff!important'
                   },
                   '@media (max-width: 768px)': {
                     fontSize: '18px',
@@ -293,7 +295,7 @@ const Form: FC = () => {
                   }
                 }}
               >
-                {isSubmitting ? 'Submiting...' : 'Submit'}
+                {isSubmitting ? t('form submitting text') : t('form submit text')}
               </BlackButton>
             </Box>
           )}

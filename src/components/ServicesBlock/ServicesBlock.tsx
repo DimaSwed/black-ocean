@@ -3,7 +3,8 @@ import React, { FC } from 'react'
 import BlackButton from '@/common/ui-kit/ButtonBlack'
 import { Box, Stack, Typography } from '@mui/material'
 import Divider from '@/common/ui-kit/Divider'
-import { services } from './ServicesData'
+// import { services } from './ServicesData'
+import { useTranslation } from 'react-i18next'
 
 const BulletPoint = () => (
   <span
@@ -21,6 +22,10 @@ const BulletPoint = () => (
 )
 
 const ServicesBlock: FC = () => {
+  const { t } = useTranslation()
+
+  const serviceKeys = ['iosApps', 'androidApps', 'macOS', 'crm', 'analysis', 'webTraffic']
+
   return (
     <Box
       id="services-section"
@@ -63,93 +68,109 @@ const ServicesBlock: FC = () => {
           textTransform: 'uppercase'
         }}
       >
-        Our Services
+        {t('services title')}
       </Typography>
 
       <Stack>
-        {services.map((service, index) => (
-          <Box
-            key={index}
-            sx={{
-              display: 'flex',
-              borderTop: '1px solid #FFFFFF33',
-              borderBottom: '1px solid #FFFFFF33',
-              p: '10px 0 40px 0',
-              '@media (max-width: 480px)': {
-                flexDirection: 'column-reverse',
-                gap: '30px'
-              }
-            }}
-          >
-            <Box sx={{ flex: '1 1 50%' }}>
-              <Typography
-                variant="subtitle2"
-                sx={{
-                  lineHeight: '130%',
-                  color: 'primary.main',
-                  maxWidth: '270px',
-                  '@media (max-width:480px)': { maxWidth: '100%', lineHeight: '130%' }
-                }}
-              >
-                {service.description}
-              </Typography>
-            </Box>
+        {serviceKeys.map((key, index) => {
+          const service = t(`services description.${key}`, { returnObjects: true }) as {
+            title: string
+            description: string
+            bulletPoints: string[]
+          }
 
-            <Stack
+          return (
+            <Box
+              key={index}
               sx={{
-                flex: '1 1 50%',
-                gap: '25px',
-                '@media (max-width: 992px) and (min-width: 769px)': {
+                display: 'flex',
+                borderTop: '1px solid #FFFFFF33',
+                borderBottom: '1px solid #FFFFFF33',
+                p: '10px 0 40px 0',
+                '@media (max-width: 480px)': {
+                  flexDirection: 'column-reverse',
                   gap: '30px'
-                },
-                '@media (max-width: 768px)': {
-                  gap: '25px'
-                },
-                '@media (max-width: 480px) and (min-width: 321px)': {
-                  gap: '15px'
                 }
               }}
             >
-              <Box>
+              <Box sx={{ flex: '1 1 50%' }}>
                 <Typography
-                  variant="h2"
-                  sx={{ color: 'primary.light', '@media (max-width:480px)': { fontSize: '26px' } }}
+                  variant="subtitle2"
+                  sx={{
+                    lineHeight: '130%',
+                    color: 'primary.main',
+                    maxWidth: '270px',
+                    '@media (max-width:480px)': { maxWidth: '100%', lineHeight: '130%' }
+                  }}
                 >
-                  {service.title}
+                  {service.description}
                 </Typography>
               </Box>
-              <Stack>
-                <Typography variant="subtitle1" gutterBottom color="success.main" fontWeight={600}>
-                  <Box
-                    component="ul"
+
+              <Stack
+                sx={{
+                  flex: '1 1 50%',
+                  gap: '25px',
+                  '@media (max-width: 992px) and (min-width: 769px)': {
+                    gap: '30px'
+                  },
+                  '@media (max-width: 768px)': {
+                    gap: '25px'
+                  },
+                  '@media (max-width: 480px) and (min-width: 321px)': {
+                    gap: '15px'
+                  }
+                }}
+              >
+                <Box>
+                  <Typography
+                    variant="h2"
                     sx={{
-                      display: 'flex', // Добавляем flex-контейнер
-                      flexDirection: 'column', // Для вертикального списка
-                      gap: '15px',
-                      '@media (max-width: 480px) and (min-width: 321px)': {
-                        gap: '10px'
-                      }
+                      color: 'primary.light',
+                      '@media (max-width:480px)': { fontSize: '26px' }
                     }}
                   >
-                    {service.bulletPoints.map((point, i) => (
-                      <Box
-                        component="li"
-                        key={i}
-                        sx={{
-                          position: 'relative',
-                          paddingLeft: '20px'
-                        }}
-                      >
-                        <BulletPoint />
-                        {point}
-                      </Box>
-                    ))}
-                  </Box>
-                </Typography>
+                    {service.title}
+                  </Typography>
+                </Box>
+                <Stack>
+                  <Typography
+                    variant="subtitle1"
+                    gutterBottom
+                    color="success.main"
+                    fontWeight={600}
+                  >
+                    <Box
+                      component="ul"
+                      sx={{
+                        display: 'flex', // Добавляем flex-контейнер
+                        flexDirection: 'column', // Для вертикального списка
+                        gap: '15px',
+                        '@media (max-width: 480px) and (min-width: 321px)': {
+                          gap: '10px'
+                        }
+                      }}
+                    >
+                      {service.bulletPoints.map((point, i) => (
+                        <Box
+                          component="li"
+                          key={i}
+                          sx={{
+                            position: 'relative',
+                            paddingLeft: '20px'
+                          }}
+                        >
+                          <BulletPoint />
+                          {point}
+                        </Box>
+                      ))}
+                    </Box>
+                  </Typography>
+                </Stack>
               </Stack>
-            </Stack>
-          </Box>
-        ))}
+            </Box>
+          )
+        })}
       </Stack>
 
       <Stack
@@ -193,7 +214,7 @@ const ServicesBlock: FC = () => {
                 textTransform: 'uppercase'
               }}
             >
-              {'Become a Client'}
+              {t('serices button')}
             </Typography>
           </BlackButton>
         </Box>

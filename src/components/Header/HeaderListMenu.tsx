@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
-import { Typography } from '@mui/material'
+import { Typography, useMediaQuery } from '@mui/material'
+import { useTranslation } from 'react-i18next'
 
 interface HeaderListMenuProps {
   customStyles?: React.CSSProperties
@@ -7,16 +8,26 @@ interface HeaderListMenuProps {
 }
 
 const HeaderListMenu: FC<HeaderListMenuProps> = ({ customStyles, onClick }) => {
+  const { t } = useTranslation()
+  const isLaptop = useMediaQuery(`(max-width: 768px)`)
+
   const sections = [
-    { name: 'About', id: 'about-section' },
-    { name: 'Services', id: 'services-section' },
-    { name: 'Why We', id: 'why-we-section' },
-    { name: 'Bridgify', id: 'bridgify-section' }
+    { name: t('about'), id: 'about-section' },
+    { name: t('services'), id: 'services-section' },
+    { name: t('bridgify'), id: 'bridgify-section' },
+    { name: t('whyWe'), id: 'why-we-section' }
+  ]
+
+  const sectionsMobile = [
+    { name: t('about'), id: 'about-section' },
+    { name: t('products'), id: 'services-section' },
+    { name: t('whyWe'), id: 'why-we-section' },
+    { name: t('contacts'), id: 'contacts-section' }
   ]
 
   return (
     <>
-      {sections.map((section) => (
+      {(isLaptop ? sectionsMobile : sections).map((section) => (
         <Typography
           key={section.name}
           component="a"

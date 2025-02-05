@@ -3,8 +3,12 @@ import React, { FC } from 'react'
 import { Box, Stack, Typography } from '@mui/material'
 import Header from '../Header/Header'
 import Divider from '@/common/ui-kit/Divider'
+import { useTranslation } from 'react-i18next'
+import { Language } from '@/models/language.types'
 
 const HeroBlock: FC = () => {
+  const { t, i18n } = useTranslation()
+  const isEnglish = i18n.language === Language.ENG
   const handleScroll = () => {
     const section = document.getElementById('services-section')
     if (section) {
@@ -47,13 +51,13 @@ const HeroBlock: FC = () => {
           },
           '@media (max-width: 480px) and (min-width: 321px)': {
             padding: '60px 16px 30px 16px',
-            gap: '76px',
+            gap: isEnglish ? '76px' : '30px',
             height: '540px'
           },
           '@media (max-width: 320px) ': {
             padding: '40px 10px 20px 10px',
             gap: '20px',
-            height: '553px'
+            height: isEnglish ? '553px' : '635px'
           }
         }}
       >
@@ -112,22 +116,24 @@ const HeroBlock: FC = () => {
               color: 'primary.light',
               letterSpacing: -3,
               textTransform: 'uppercase',
-              textIndent: '425px',
+              textIndent: isEnglish ? '425px' : '285px',
               '@media (max-width:992px) and (min-width: 769px)': {
-                textIndent: '283px',
-                maxWidth: '929px'
+                textIndent: isEnglish ? '283px' : '180px',
+                maxWidth: isEnglish ? '929px' : '910px'
               },
 
               '@media (max-width: 768px) and (min-width: 481px)': {
-                textIndent: '170px',
-                maxWidth: '706px'
+                textIndent: isEnglish ? '170px' : '105px',
+                maxWidth: isEnglish ? '706px' : '690px'
               },
-              '@media (max-width:480px)': { textIndent: '0px', maxWidth: '400px' },
+              '@media (max-width:480px)': {
+                textIndent: '0px',
+                maxWidth: isEnglish ? '400px' : '391px'
+              },
               '@media (max-width:320px)': { maxWidth: '275px' }
             }}
           >
-            Simplify your digital journey with tailored web traffic strategies and cutting-edge
-            software designed to elevate your business performance.
+            {t('hero title')}
           </Typography>
         </Box>
 
@@ -149,7 +155,7 @@ const HeroBlock: FC = () => {
             },
             '@media (max-width: 480px)': {
               maxWidth: '100%',
-              gap: '80px'
+              gap: isEnglish ? '80px' : '42px'
             },
             '@media (max-width: 320px)': {
               gap: '31px'
@@ -164,8 +170,7 @@ const HeroBlock: FC = () => {
               color: 'primary.light'
             }}
           >
-            Optimize your online presence with precision, unlock exclusive tools to tackle business
-            challenges, and drive growth with scalable, reliable solutions from Black Ocean.
+            {t('hero subtitle')}
           </Typography>
 
           <Box
@@ -180,7 +185,7 @@ const HeroBlock: FC = () => {
             }}
           >
             <Typography variant="body2" sx={{ fontWeight: '600', lineHeight: '120%' }}>
-              Scroll to explore
+              {t('hero scroll')}
             </Typography>
             <Box
               component="img"

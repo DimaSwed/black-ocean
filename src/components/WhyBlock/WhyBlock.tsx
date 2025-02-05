@@ -2,9 +2,14 @@
 import { FC } from 'react'
 import { Box, Stack, Typography } from '@mui/material'
 import ColoredButton from '@/common/ui-kit/ColoredButton'
-import { whyData } from './WhyBlockData'
+// import { whyData } from './WhyBlockData'
+import { useTranslation } from 'react-i18next'
 
 const WhyBlock: FC = () => {
+  const { t } = useTranslation()
+
+  const whyKeys = ['first', 'second', 'third', 'fourth']
+
   return (
     <Stack
       id="why-we-section"
@@ -48,7 +53,7 @@ const WhyBlock: FC = () => {
           mb: '20px'
         }}
       >
-        Why choose Black Ocean?
+        {t('why title')}
       </Typography>
 
       <Typography
@@ -77,8 +82,7 @@ const WhyBlock: FC = () => {
           }
         }}
       >
-        Expert-driven solutions, proven industry leadership, and dedicated support empower your
-        business to achieve lasting success and measurable results.
+        {t('why subtitle')}
       </Typography>
 
       <Stack
@@ -99,100 +103,108 @@ const WhyBlock: FC = () => {
           }
         }}
       >
-        {whyData.map((data, index) => (
-          <Box
-            key={index}
-            sx={{
-              display: 'flex',
-              gap: '158px',
-              p: '20px 10px',
-              borderTop: '1px solid #FFFFFF33',
-              '@media (max-width: 1280px) and (min-width: 993px)': {
-                gap: '130px'
-              },
-              '@media (max-width: 992px) and (min-width: 769px)': {
-                gap: '100px'
-              },
-              '@media (max-width: 768px) and (min-width: 481px)': {
-                gap: '130px'
-              },
-              '@media (max-width: 480px)': {
-                flexDirection: 'column',
-                gap: '40px'
-              }
-            }}
-          >
+        {whyKeys.map((key, index) => {
+          const data = t(`why description.${key}`, { returnObjects: true }) as {
+            title: string
+            description: string
+            imgSrc: string
+          }
+
+          return (
             <Box
-              component={'img'}
-              src={data.imgSrc}
-              sx={{ maxWidth: '40px', width: '100%', height: '40px' }}
-            />
-            <Box
+              key={index}
               sx={{
                 display: 'flex',
-                gap: '55px',
-                width: '100%',
+                gap: '158px',
+                p: '20px 10px',
+                borderTop: '1px solid #FFFFFF33',
                 '@media (max-width: 1280px) and (min-width: 993px)': {
-                  gap: '60px',
-                  maxWidth: '590px'
+                  gap: '130px'
                 },
                 '@media (max-width: 992px) and (min-width: 769px)': {
-                  gap: '30px',
-                  maxWidth: '470px'
+                  gap: '100px'
                 },
                 '@media (max-width: 768px) and (min-width: 481px)': {
-                  gap: '60px'
+                  gap: '130px'
                 },
                 '@media (max-width: 480px)': {
-                  gap: '15px',
                   flexDirection: 'column',
-                  maxWidth: '100%'
+                  gap: '40px'
                 }
               }}
             >
-              <Typography
-                variant="h4"
+              <Box
+                component={'img'}
+                src={data.imgSrc}
+                sx={{ maxWidth: '40px', width: '100%', height: '40px' }}
+              />
+              <Box
                 sx={{
-                  maxWidth: '208px',
+                  display: 'flex',
+                  gap: '55px',
                   width: '100%',
                   '@media (max-width: 1280px) and (min-width: 993px)': {
-                    maxWidth: '180px'
+                    gap: '60px',
+                    maxWidth: '590px'
                   },
                   '@media (max-width: 992px) and (min-width: 769px)': {
-                    maxWidth: '150px'
+                    gap: '30px',
+                    maxWidth: '470px'
                   },
                   '@media (max-width: 768px) and (min-width: 481px)': {
-                    maxWidth: '180px'
-                  }
-                }}
-              >
-                {data.title}
-              </Typography>
-              <Typography
-                variant="subtitle1"
-                color="primary.main"
-                sx={{
-                  maxWidth: '406px',
-                  width: '100%',
-                  '@media (max-width: 1280px) and (min-width: 993px)': {
-                    maxWidth: '350px'
+                    gap: '60px'
                   },
-                  '@media (max-width: 992px) and (min-width: 769px)': {
-                    maxWidth: '290px'
-                  },
-                  '@media (max-width: 768px) and (min-width: 481px)': {
-                    maxWidth: '298px'
-                  },
-                  '@media (max-width: 480px) and (min-width: 321px)': {
+                  '@media (max-width: 480px)': {
+                    gap: '15px',
+                    flexDirection: 'column',
                     maxWidth: '100%'
                   }
                 }}
               >
-                {data.description}
-              </Typography>
+                <Typography
+                  variant="h4"
+                  sx={{
+                    maxWidth: '208px',
+                    width: '100%',
+                    '@media (max-width: 1280px) and (min-width: 993px)': {
+                      maxWidth: '180px'
+                    },
+                    '@media (max-width: 992px) and (min-width: 769px)': {
+                      maxWidth: '150px'
+                    },
+                    '@media (max-width: 768px) and (min-width: 481px)': {
+                      maxWidth: '180px'
+                    }
+                  }}
+                >
+                  {data.title}
+                </Typography>
+                <Typography
+                  variant="subtitle1"
+                  color="primary.main"
+                  sx={{
+                    maxWidth: '406px',
+                    width: '100%',
+                    '@media (max-width: 1280px) and (min-width: 993px)': {
+                      maxWidth: '350px'
+                    },
+                    '@media (max-width: 992px) and (min-width: 769px)': {
+                      maxWidth: '290px'
+                    },
+                    '@media (max-width: 768px) and (min-width: 481px)': {
+                      maxWidth: '298px'
+                    },
+                    '@media (max-width: 480px) and (min-width: 321px)': {
+                      maxWidth: '100%'
+                    }
+                  }}
+                >
+                  {data.description}
+                </Typography>
+              </Box>
             </Box>
-          </Box>
-        ))}
+          )
+        })}
 
         <Box
           component="a"
@@ -231,7 +243,7 @@ const WhyBlock: FC = () => {
               // }
             }}
           >
-            {'Become a Client'}
+            {t('why button')}
           </ColoredButton>
         </Box>
       </Stack>

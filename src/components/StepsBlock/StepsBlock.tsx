@@ -1,13 +1,21 @@
+'use client'
 import { FC } from 'react'
-import { Stack, Box, Typography } from '@mui/material'
-import { stepsData } from './StepsBlockData'
+import { Stack, Box, Typography, useMediaQuery } from '@mui/material'
+// import { stepsData } from './StepsBlockData'
+import { useTranslation } from 'react-i18next'
 
 const StepsBlock: FC = () => {
+  const { t } = useTranslation()
+
+  const stepsKeys = ['first', 'second', 'third']
+  const isMobile = useMediaQuery(`(max-width: 320px)`)
   return (
     <Box
       id="bridgify-section"
       sx={{
-        backgroundImage: 'url("/hero-section.png")',
+        backgroundImage: isMobile
+          ? 'url("/steps-section-bg-mobile.png")'
+          : 'url("/steps-section-bg.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: 'auto'
@@ -52,7 +60,7 @@ const StepsBlock: FC = () => {
             mb: '10px'
           }}
         >
-          This is exactly how it works
+          {t('steps title')}
         </Typography>
 
         <Typography
@@ -80,9 +88,7 @@ const StepsBlock: FC = () => {
             }
           }}
         >
-          Over the long experience of working with clients, we have built our own scheme of work.
-          Our cooperation scheme is extremely effective. We are able to provide you with the highest
-          quality service and products.
+          {t('steps subtitle')}
         </Typography>
 
         <Box
@@ -93,59 +99,66 @@ const StepsBlock: FC = () => {
             '@media (max-width:480px)': { flexDirection: 'column', gap: '40px', mb: '60px' }
           }}
         >
-          {stepsData.map((step, idx) => (
-            <Stack
-              key={idx}
-              sx={{
-                maxWidth: '416px',
-                width: '100%',
-                p: '15px',
-                '@media (max-width: 992px)': {
-                  maxWidth: '300px'
-                },
-                '@media (max-width:480px)': { maxWidth: '100%' }
-              }}
-            >
-              <Typography
-                variant="h2"
+          {stepsKeys.map((key, idx) => {
+            const step = t(`steps description.${key}`, { returnObjects: true }) as {
+              id: string
+              title: string
+              description: string
+            }
+            return (
+              <Stack
+                key={idx}
                 sx={{
-                  color: 'primary.light',
-                  fontSize: '44px',
-                  lineHeight: '80%',
-                  mb: '60px',
-                  '@media (max-width:480px)': { mb: '40px' }
-                }}
-              >
-                {step.id}
-              </Typography>
-              <Typography
-                variant="h3"
-                sx={{
-                  color: 'primary.light',
-                  mb: '20px',
-                  lineHeight: '120%'
-                }}
-              >
-                {step.title}
-              </Typography>
-              <Typography
-                variant="subtitle1"
-                sx={{
-                  color: 'primary.main',
-                  maxWidth: '350px',
-                  '@media (max-width: 1280px) and (min-width: 993px)': {
-                    maxWidth: '330px'
-                  },
-                  '@media (max-width: 768px) and (min-width: 481px)': {
-                    maxWidth: '200px'
+                  maxWidth: '416px',
+                  width: '100%',
+                  p: '15px',
+                  '@media (max-width: 992px)': {
+                    maxWidth: '300px'
                   },
                   '@media (max-width:480px)': { maxWidth: '100%' }
                 }}
               >
-                {step.description}
-              </Typography>
-            </Stack>
-          ))}
+                <Typography
+                  variant="h2"
+                  sx={{
+                    color: 'primary.light',
+                    fontSize: '44px',
+                    lineHeight: '80%',
+                    mb: '60px',
+                    '@media (max-width:480px)': { mb: '40px' }
+                  }}
+                >
+                  {step.id}
+                </Typography>
+                <Typography
+                  variant="h3"
+                  sx={{
+                    color: 'primary.light',
+                    mb: '20px',
+                    lineHeight: '120%'
+                  }}
+                >
+                  {step.title}
+                </Typography>
+                <Typography
+                  variant="subtitle1"
+                  sx={{
+                    color: 'primary.main',
+                    maxWidth: '350px',
+                    '@media (max-width: 1280px) and (min-width: 993px)': {
+                      maxWidth: '330px'
+                    },
+                    '@media (max-width: 768px) and (min-width: 481px)': {
+                      maxWidth: '200px'
+                    },
+                    '@media (max-width:480px)': { maxWidth: '100%' }
+                  }}
+                >
+                  {step.description}
+                </Typography>
+              </Stack>
+            )
+          })}
         </Box>
 
         <Box

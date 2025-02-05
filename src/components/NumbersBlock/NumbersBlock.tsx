@@ -3,9 +3,12 @@ import { FC } from 'react'
 import { Stack, Typography, useMediaQuery } from '@mui/material'
 import NumbersSwiper from './NumbersSwiper'
 import NumbersGrid from './NumbersGrid'
+import { useTranslation } from 'react-i18next'
 
 const NumbersBlock: FC = () => {
-  const isDesktop = useMediaQuery(`(max-width: 1280px)`)
+  const { t } = useTranslation()
+
+  // const isDesktop = useMediaQuery(`(max-width: 1280px)`)
   const isTablet = useMediaQuery(`(max-width: 768px)`)
   const isMobile = useMediaQuery(`(max-width: 320px)`)
 
@@ -47,23 +50,37 @@ const NumbersBlock: FC = () => {
           letterSpacing: -2,
           zIndex: 1,
           mb: '10px',
-          '@media (max-width: 1280px)': {
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start'
-          }
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'flex-start'
+          // '@media (max-width: 1280px)': {
+          //   display: 'flex',
+          //   flexDirection: 'column',
+          //   alignItems: 'flex-start'
+          // }
         }}
       >
-        {isDesktop ? (
+        {/* {isDesktop ? (
           <>
-            <span>Trust the numbers {isMobile ? '' : ' /'} </span>
+            <span>
+              {t('numbers title 1')} {isMobile ? '' : ' /'}{' '}
+            </span>
             <span style={{ display: 'block', alignSelf: isMobile ? 'flex-start' : 'flex-end' }}>
-              Trust Black Ocean
+              {t('numbers title 2')}
             </span>
           </>
         ) : (
-          <span>Trust the numbers / Trust Black Ocean</span>
-        )}
+          <span>{t('numbers title 3')}</span>
+        )} */}
+
+        <>
+          <span>
+            {t('numbers title 1')} {isMobile ? '' : ' /'}{' '}
+          </span>
+          <span style={{ display: 'block', alignSelf: isMobile ? 'flex-start' : 'flex-end' }}>
+            {t('numbers title 2')}
+          </span>
+        </>
       </Typography>
 
       <Typography
@@ -94,8 +111,7 @@ const NumbersBlock: FC = () => {
           }
         }}
       >
-        When you work with us, you’re choosing a team that values excellence in every detail, from
-        project completion to ongoing support.
+        {t('numbers subtitle')}
       </Typography>
 
       {isTablet ? <NumbersGrid /> : <NumbersSwiper />}

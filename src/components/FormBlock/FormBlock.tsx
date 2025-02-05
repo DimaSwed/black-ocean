@@ -2,8 +2,11 @@
 import { FC } from 'react'
 import { Box, Typography } from '@mui/material'
 import ContactForm from '../FormBlock/Form'
+import { useTranslation } from 'react-i18next'
 
 const Form: FC = () => {
+  const { t } = useTranslation()
+
   return (
     <Box
       sx={{
@@ -62,7 +65,7 @@ const Form: FC = () => {
             }
           }}
         >
-          Drop us a line
+          {t('form title')}
         </Typography>
       </Box>
 

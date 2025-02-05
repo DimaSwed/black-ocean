@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import { Box, Typography } from '@mui/material'
+import i18next from 'i18next'
 
 interface LanguageSwitcherProps {
   lang: string
@@ -7,6 +8,12 @@ interface LanguageSwitcherProps {
 }
 
 export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ lang, onChangeLang }) => {
+  const changeLanguage = (language: string) => {
+    i18next.changeLanguage(language)
+    localStorage.setItem('lang', language)
+    onChangeLang(language)
+  }
+
   return (
     <Box
       sx={{
@@ -18,7 +25,8 @@ export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ lang, onChangeLang
     >
       <Typography
         variant="button"
-        onClick={() => onChangeLang('eng')}
+        // onClick={() => onChangeLang('eng')}
+        onClick={() => changeLanguage('eng')}
         color={lang === 'eng' ? 'primary.light' : 'primary.main'}
         border="none"
         sx={{ backgroundColor: 'transparent' }}
@@ -36,7 +44,8 @@ export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ lang, onChangeLang
       </Typography>
       <Typography
         variant="button"
-        onClick={() => onChangeLang('cs')}
+        // onClick={() => onChangeLang('cs')}
+        onClick={() => changeLanguage('cs')}
         color={lang === 'cs' ? 'primary.light' : 'primary.main'}
         border="none"
         sx={{

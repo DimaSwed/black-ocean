@@ -2,12 +2,22 @@
 import { FC, useState } from 'react'
 import { Stack, Typography, Box } from '@mui/material'
 import ShowMore from '@/common/ui-kit/ShowMoreButton'
-import { testimonialsData } from './TestimonialData'
+// import { testimonialsData } from './TestimonialData'
 import { TestimonialCard } from './TestimonialCard'
+import { useTranslation } from 'react-i18next'
+
 const TestimonialsBlock: FC = () => {
+  const { t } = useTranslation()
+
+  const testimonialsKeys = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth']
+
   const [isExpanded, setIsExpanded] = useState(false)
 
-  const displayedTestimonials = isExpanded ? testimonialsData : testimonialsData.slice(0, 3)
+  const buttonText = isExpanded ? t('testimonials less button') : t('testimonials show button')
+
+  // const displayedTestimonials = isExpanded ? testimonialsData : testimonialsData.slice(0, 3)
+
+  const displayedTestimonials = isExpanded ? testimonialsKeys : testimonialsKeys.slice(0, 3)
 
   return (
     <Stack
@@ -49,7 +59,7 @@ const TestimonialsBlock: FC = () => {
           mb: '40px'
         }}
       >
-        TESTIMONIALS
+        {t('testimonials title')}
       </Typography>
 
       <Stack
@@ -62,9 +72,17 @@ const TestimonialsBlock: FC = () => {
           }
         }}
       >
-        {displayedTestimonials.map((testimonial) => (
-          <TestimonialCard key={testimonial.id} {...testimonial} />
-        ))}
+        {displayedTestimonials.map((key) => {
+          const testimonial = t(`testimonials description.${key}`, { returnObjects: true }) as {
+            id: string
+            name: string
+            position: string
+            image: string
+            tasks: string[]
+            feedback: string
+          }
+          return <TestimonialCard key={testimonial.id} {...testimonial} />
+        })}
       </Stack>
       <Box
         sx={{
@@ -79,7 +97,7 @@ const TestimonialsBlock: FC = () => {
         <ShowMore
           isExpanded={isExpanded}
           onClick={() => setIsExpanded(!isExpanded)}
-          text={isExpanded ? 'Show less' : 'Show more'}
+          text={buttonText}
         />
       </Box>
     </Stack>
