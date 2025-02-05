@@ -1,3 +1,4 @@
+'use client'
 import { FC } from 'react'
 import { Box, Typography } from '@mui/material'
 import i18next from 'i18next'

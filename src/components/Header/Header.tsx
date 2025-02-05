@@ -14,9 +14,11 @@ const Header: FC = () => {
   const [lang, setLang] = useState('eng')
 
   useEffect(() => {
-    const storedLang = localStorage.getItem('lang')
-    if (storedLang) {
-      setLang(storedLang)
+    if (typeof window !== 'undefined') {
+      const storedLang = localStorage.getItem('lang')
+      if (storedLang) {
+        setLang(storedLang)
+      }
     }
   }, [])
 
