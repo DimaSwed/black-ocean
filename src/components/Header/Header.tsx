@@ -1,5 +1,5 @@
 'use client'
-import React, { FC, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import { Box, Stack, Typography } from '@mui/material'
 import { BurgerButton } from './Burger'
 import { MobileNav } from './MobileNav'
@@ -9,18 +9,23 @@ import HeaderListMenu from './HeaderListMenu'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import Divider from '@/common/ui-kit/Divider'
 import { usePathname } from 'next/navigation'
+import Cookies from 'js-cookie'
 
 const Header: FC = () => {
   const [lang, setLang] = useState<string>('eng')
 
-  // useEffect(() => {
-  //   if (typeof window !== 'undefined') {
-  //     const storedLang = localStorage.getItem('lang')
-  //     if (storedLang) {
-  //       setLang(storedLang)
-  //     }
-  //   }
-  // }, [lang])
+  useEffect(() => {
+    // Загружаем язык из куков при монтировании компонента
+    const storedLang = Cookies.get('lang')
+    if (storedLang) {
+      setLang(storedLang)
+    }
+  }, [])
+
+  const handleLangChange = (newLang: string) => {
+    setLang(newLang)
+    Cookies.set('lang', newLang)
+  }
 
   const pathname = usePathname()
   const isHomePage = pathname === '/'
@@ -83,7 +88,7 @@ const Header: FC = () => {
             '@media (max-width:768px)': { display: 'none' }
           }}
         >
-          <LanguageSwitcher lang={lang} onChangeLang={setLang} />
+          <LanguageSwitcher lang={lang} onChangeLang={handleLangChange} />
         </Box>
 
         <Stack
@@ -106,7 +111,7 @@ const Header: FC = () => {
             '@media (max-width:768px)': { display: 'none' }
           }}
         >
-          <MobileNav lang={lang} onChangeLang={setLang} />
+          <MobileNav lang={lang} onChangeLang={handleLangChange} />
 
           <a
             href="tel:+420773635962"

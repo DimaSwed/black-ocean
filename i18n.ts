@@ -11,7 +11,6 @@ i18n.use(initReactI18next).init({
     }
   },
   lng: 'eng',
-  // lng: localStorage.getItem('lang') || 'eng',
   fallbackLng: 'eng',
   interpolation: {
     escapeValue: false

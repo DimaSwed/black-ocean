@@ -7,6 +7,7 @@ import I18nProvider from '@/providers/provider-i18n'
 import '@/styles/globals.sass'
 import Footer from '@/components/Footer/Footer'
 import { Box } from '@mui/material'
+import { cookies } from 'next/headers'
 
 export const metadata: Metadata = {
   title: 'BLACK OCEAN',
@@ -18,13 +19,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const lang = cookies().get('lang')?.value || 'eng'
+
   return (
     <html lang="en">
       <body style={{ fontFamily: 'Open Sans, sans-serif' }}>
         <StoreProvider>
           <AppRouterCacheProvider>
             <ThemeWrapper>
-              <I18nProvider>
+              <I18nProvider lang={lang}>
                 {children}
                 <Box sx={{ backgroundColor: 'text.primary' }}>
                   <Footer />

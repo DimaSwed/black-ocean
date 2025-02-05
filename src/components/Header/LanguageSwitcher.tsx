@@ -1,4 +1,3 @@
-'use client'
 import { FC } from 'react'
 import { Box, Typography } from '@mui/material'
 import i18next from 'i18next'
@@ -11,9 +10,6 @@ interface LanguageSwitcherProps {
 export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ lang, onChangeLang }) => {
   const changeLanguage = (language: string) => {
     i18next.changeLanguage(language)
-    // if (typeof window !== 'undefined') {
-    //   localStorage.setItem('lang', language)
-    // }
     onChangeLang(language)
   }
 
