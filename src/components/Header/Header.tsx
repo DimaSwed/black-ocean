@@ -1,5 +1,5 @@
 'use client'
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC, useState } from 'react'
 import { Box, Stack, Typography } from '@mui/material'
 import { BurgerButton } from './Burger'
 import { MobileNav } from './MobileNav'
@@ -11,16 +11,16 @@ import Divider from '@/common/ui-kit/Divider'
 import { usePathname } from 'next/navigation'
 
 const Header: FC = () => {
-  const [lang, setLang] = useState('eng')
+  const [lang, setLang] = useState<string>('eng')
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const storedLang = localStorage.getItem('lang')
-      if (storedLang) {
-        setLang(storedLang)
-      }
-    }
-  }, [])
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     const storedLang = localStorage.getItem('lang')
+  //     if (storedLang) {
+  //       setLang(storedLang)
+  //     }
+  //   }
+  // }, [lang])
 
   const pathname = usePathname()
   const isHomePage = pathname === '/'

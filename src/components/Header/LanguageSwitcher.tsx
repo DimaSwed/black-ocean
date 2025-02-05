@@ -11,9 +11,9 @@ interface LanguageSwitcherProps {
 export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ lang, onChangeLang }) => {
   const changeLanguage = (language: string) => {
     i18next.changeLanguage(language)
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('lang', language)
-    }
+    // if (typeof window !== 'undefined') {
+    //   localStorage.setItem('lang', language)
+    // }
     onChangeLang(language)
   }
 
