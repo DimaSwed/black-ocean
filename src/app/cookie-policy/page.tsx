@@ -181,15 +181,6 @@ const CookiePolicy: FC = () => {
               </Link>
               ,{' '}
               <Link
-                href="https://support.google.com/chrome/answer/95647?hl=en-GB&co=GENIE.Platform%3DDesktop"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: 'none', color: '#5993e5' }}
-              >
-                Google Chrome
-              </Link>
-              ,{' '}
-              <Link
                 href="https://tatrck.com/h/0Hu30uVO0rlp?url=https%3A%2F%2Fblogs.opera.com%2Ftips-and-tricks%2F2023%2F04%2Fclean-browser-and-remove-trackers%2F"
                 target="_blank"
                 rel="noopener noreferrer"

@@ -229,7 +229,7 @@ const WhyBlock: FC = () => {
               textTransform: 'uppercase',
               p: '21px auto',
               lineHeight: '100%',
-              letterSpacing: -2,
+              letterSpacing: -1,
               '@media (max-width: 768px)': {
                 fontSize: '18px'
               }

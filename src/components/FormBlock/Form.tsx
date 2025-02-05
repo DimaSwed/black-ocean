@@ -58,6 +58,7 @@ const inputStyles = (hasError: boolean) => ({
     fontStyle: 'normal',
     lineHeight: '125%',
     color: '#C3C3C3',
+    textTransform: 'uppercase',
     opacity: 1
   }
 })

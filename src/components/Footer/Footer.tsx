@@ -118,6 +118,7 @@ const Footer: FC = () => {
             href="mailto:info@oceanperform.com"
             sx={{
               textDecoration: 'none',
+              textTransform: 'uppercase',
               color: 'primary.main',
               '&:hover': { color: 'primary.light' },
               '@media (max-width:320px)': { fontSize: '20px' }

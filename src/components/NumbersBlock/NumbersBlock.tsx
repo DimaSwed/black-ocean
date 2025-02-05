@@ -4,11 +4,13 @@ import { Stack, Typography, useMediaQuery } from '@mui/material'
 import NumbersSwiper from './NumbersSwiper'
 import NumbersGrid from './NumbersGrid'
 import { useTranslation } from 'react-i18next'
+import { Language } from '@/models/language.types'
 
 const NumbersBlock: FC = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const isEnglish = i18n.language === Language.ENG
 
-  // const isDesktop = useMediaQuery(`(max-width: 1280px)`)
+  const isDesktop = useMediaQuery(`(min-width: 1281px)`)
   const isTablet = useMediaQuery(`(max-width: 768px)`)
   const isMobile = useMediaQuery(`(max-width: 320px)`)
 
@@ -60,26 +62,26 @@ const NumbersBlock: FC = () => {
           // }
         }}
       >
-        {/* {isDesktop ? (
-          <>
-            <span>
-              {t('numbers title 1')} {isMobile ? '' : ' /'}{' '}
-            </span>
-            <span style={{ display: 'block', alignSelf: isMobile ? 'flex-start' : 'flex-end' }}>
-              {t('numbers title 2')}
-            </span>
-          </>
-        ) : (
-          <span>{t('numbers title 3')}</span>
-        )} */}
-
         <>
-          <span>
-            {t('numbers title 1')} {isMobile ? '' : ' /'}{' '}
-          </span>
-          <span style={{ display: 'block', alignSelf: isMobile ? 'flex-start' : 'flex-end' }}>
-            {t('numbers title 2')}
-          </span>
+          {isEnglish && isDesktop ? (
+            <>
+              <span>{t('numbers title 3')}</span>
+            </>
+          ) : (
+            <>
+              <span>
+                {t('numbers title 1')} {isMobile ? '' : ' /'}{' '}
+              </span>
+              <span
+                style={{
+                  display: 'block',
+                  alignSelf: isMobile ? 'flex-start' : 'flex-end'
+                }}
+              >
+                {t('numbers title 2')}
+              </span>
+            </>
+          )}
         </>
       </Typography>
 

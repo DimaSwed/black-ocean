@@ -157,7 +157,7 @@ const TearmsAndConditions: FC = () => {
             5. Acceptable Use
           </Typography>
 
-          <Stack sx={{ gap: '10px' }}>
+          <Stack sx={{ gap: '0px' }}>
             <Typography variant="subtitle1" gutterBottom color="primary.main">
               5.1. You agree not to
               <ol style={{ paddingLeft: '20px' }}>

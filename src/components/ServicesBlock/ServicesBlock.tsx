@@ -210,7 +210,7 @@ const ServicesBlock: FC = () => {
                 fontFamily: 'Open Sans, sans-serif',
                 fontWeight: '700',
                 lineHeight: '100%',
-                letterSpacing: -2,
+                letterSpacing: -1,
                 textTransform: 'uppercase'
               }}
             >
