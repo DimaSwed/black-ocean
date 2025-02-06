@@ -9,6 +9,7 @@ const AboutBlock: FC = () => {
 
   const isMobileP = useMediaQuery(`(max-width: 320px)`)
   const isMobileL = useMediaQuery(`(max-width: 480px) and (min-width: 321px)`)
+  const isDesktop = useMediaQuery(`(max-width: 992px) and (min-width: 769px)`)
 
   return (
     <Stack
@@ -81,14 +82,16 @@ const AboutBlock: FC = () => {
               ? '/about-section-img-mobileL.png'
               : isMobileP
                 ? '/about-section-img-mobileP.png'
-                : '/about-section-img.png'
+                : isDesktop
+                  ? '/about-section-img-desktop.png'
+                  : '/about-section-img.png'
           }
           sx={{
             maxWidth: '416px',
             height: 'auto',
             width: '100%',
             '@media (max-width:1280px)': { maxWidth: '360px', height: '570px' },
-            '@media (max-width:992px)': { maxWidth: '300px', height: '462px' },
+            '@media (max-width:992px)': { maxWidth: '300px', height: '542px' },
             '@media (max-width:768px)': { maxWidth: '354px', height: '417px' },
             '@media (max-width:480px)': { maxWidth: '448px', height: '250px' },
             '@media (max-width:320px)': { maxWidth: '300px', height: '250px' }

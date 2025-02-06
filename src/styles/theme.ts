@@ -42,8 +42,8 @@ const lightTheme = createTheme({
       fontWeight: '600',
       fontStyle: 'normal',
       lineHeight: '125%',
-      transition: 'font-size 2s ease'
-      // '@media (max-width:1440px)': { fontSize: '15px' },
+      transition: 'font-size 2s ease',
+      '@media (max-width:480px) and (min-width:321px)': { fontWeight: '400' }
       // '@media (max-width:720px)': { fontSize: '14px' }
     },
     subtitle2: {

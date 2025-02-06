@@ -95,7 +95,8 @@ const Footer: FC = () => {
             },
             '@media (max-width: 480px) ': {
               borderBottom: '1px solid #FFFFFF33'
-            }
+            },
+            '@media (max-width:320px)': { padding: '20px 0px 20px 0px ' }
           }}
         >
           <Typography
@@ -121,7 +122,7 @@ const Footer: FC = () => {
               textTransform: 'uppercase',
               color: 'primary.main',
               '&:hover': { color: 'primary.light' },
-              '@media (max-width:320px)': { fontSize: '20px' }
+              '@media (max-width:320px)': { fontSize: '20px', textAlign: 'center' }
             }}
           >
             info@oceanperform.com

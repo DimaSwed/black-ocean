@@ -100,13 +100,7 @@ export const MobileNav: FC<IWindowProps> = ({ window, lang, onChangeLang }) => {
           alignItems: 'center',
           mt: '150px',
           '@media (max-width: 480px)': { mt: '130px' },
-          '@media (max-width: 320px)': { mt: '88px' }
-          // m: '0 auto'
-          // position: 'absolute',
-          // left: 0,
-          // right: 0,
-          // top: '50%',
-          // transform: 'translateY(-50%)'
+          '@media (max-width: 320px)': { mt: '88px', gap: '60px' }
         }}
       >
         <Stack
