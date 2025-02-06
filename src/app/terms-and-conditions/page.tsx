@@ -157,15 +157,15 @@ const TearmsAndConditions: FC = () => {
             5. Acceptable Use
           </Typography>
 
-          <Stack sx={{ gap: '0px' }}>
+          <Stack sx={{ gap: '10px' }}>
             <Typography variant="subtitle1" gutterBottom color="primary.main">
               5.1. You agree not to
               <ol style={{ paddingLeft: '20px' }}>
-                <li>
+                <li style={{ marginBottom: '5px', marginTop: '5px' }}>
                   5.1.1. use our website for any unlawful purpose, or any purpose prohibited under
                   this clause.
                 </li>
-                <li>
+                <li style={{ marginBottom: '5px' }}>
                   5.1.2. use our website in any way that could damage our website, website, or
                   general business of Black Ocean s.r.o.
                 </li>
@@ -175,22 +175,22 @@ const TearmsAndConditions: FC = () => {
             <Typography variant="subtitle1" gutterBottom color="primary.main">
               5.2. You further agree not to use our website:
               <ol style={{ paddingLeft: '20px' }}>
-                <li>
+                <li style={{ marginBottom: '5px', marginTop: '5px' }}>
                   5.2.1. to harass, abuse, or threaten others or otherwise violate any person&apos;s
                   legal rights.
                 </li>
-                <li>
+                <li style={{ marginBottom: '5px' }}>
                   5.2.2. to violate any of our intellectual property rights or any third party.
                 </li>
-                <li>
+                <li style={{ marginBottom: '5px' }}>
                   5.2.3. to upload or otherwise disseminate any computer viruses or other software
                   that may damage the property of another.
                 </li>
-                <li>
+                <li style={{ marginBottom: '5px' }}>
                   5.2.4. to perpetrate any fraud. 5.2.5. to publish or distribute any obscene or
                   defamatory material.
                 </li>
-                <li>
+                <li style={{ marginBottom: '5px' }}>
                   5.2.6. to publish or distribute any material that incites violence, hate, or
                   discrimination towards any group.
                 </li>
