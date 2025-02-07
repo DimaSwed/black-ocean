@@ -98,9 +98,12 @@ export const MobileNav: FC<IWindowProps> = ({ window, lang, onChangeLang }) => {
         sx={{
           gap: '100px',
           alignItems: 'center',
-          mt: '150px',
-          '@media (max-width: 480px)': { mt: '130px' },
-          '@media (max-width: 320px)': { mt: '88px', gap: '60px' }
+          mt: '130px',
+          '@media (max-width: 480px)': { mt: '100px' },
+          '@media (max-width: 320px)': {
+            mt: '68px',
+            gap: '60px'
+          }
         }}
       >
         <Stack
