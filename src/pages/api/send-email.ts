@@ -8,15 +8,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     try {
       const transporter = nodemailer.createTransport({
-        // host: 'smtp.mail.ru',
-        // port: 587,
-        // secure: false,
-        // service: 'gmail',
-        host: 'mail.tutanota.com',
-        port: 587, // Порт 587 для STARTTLS
-        secure: false, // Используется STARTTLS (не SSL)
-        // port: 465, // Порт 465 для безопасного соединения
-        // secure: true, // Использование SSL
+        host: 'smtp.hostinger.com',
+        port: 465,
+        secure: true,
         auth: {
           user: process.env.MAIL_USER,
           pass: process.env.MAIL_PASS
@@ -26,7 +20,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       // Отправка электронного письма
       const info = await transporter.sendMail({
         from: `"${name}" <${process.env.MAIL_USER}>`,
-        to: 'keenandtightcaretakers@tutamail.com',
+        to: 'work@blackocean-cz.com',
         subject: '[BLACK OCEAN] Form',
         text: `A new application has been received:\n
 Name: ${name}\nEmail: ${mail}\nPhone: ${telephone}\nMessage: ${message}`,
